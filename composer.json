@@ -23,10 +23,9 @@
     },
     "minimum-stability": "dev",
     "prefer-stable" : true,
-    "require": {
-        "illuminate/http": "^5.3"
-    },
+    "require": {},
     "require-dev": {
+        "illuminate/http": "^5.3",
         "illuminate/pagination": "^5.3",
         "phpish/link_header": "dev-master",
         "phpunit/phpunit": "^5.6"
