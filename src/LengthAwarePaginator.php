@@ -7,6 +7,10 @@ use Illuminate\Pagination\LengthAwarePaginator as BasePaginator;
 
 class LengthAwarePaginator extends BasePaginator {
 
+	public function __construct(BasePaginator $paginator, array $options = []) {
+		parent::__construct($paginator->items(), $paginator->total(), $paginator->perPage(), $paginator->currentPage(), $options);
+	}
+
 	/**
 	 * The Paginator instance returns only the items
 	 *
