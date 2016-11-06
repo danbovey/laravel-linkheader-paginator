@@ -1,0 +1,34 @@
+{
+    "name": "danbovey/laravel-linkheader-paginator",
+    "description": "Laravel Paginator that moves pagination info to the HTTP LinkHeader",
+    "keywords": [
+        "laravel",
+        "paginator",
+        "pagination",
+        "linkheader"
+    ],
+    "homepage": "https://github.com/danbovey/laravel-linkheader-paginator",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dan Bovey",
+            "email": "dan@danbovey.uk"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "DanBovey\\LinkHeaderPaginator\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable" : true,
+    "require": {
+        "illuminate/http": "^5.3"
+    },
+    "require-dev": {
+        "illuminate/pagination": "^5.3",
+        "phpish/link_header": "dev-master",
+        "phpunit/phpunit": "^5.6"
+    }
+}
