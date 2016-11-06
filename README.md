@@ -1,9 +1,9 @@
 # Laravel LinkHeader Paginator
 
-[![Travis](https://img.shields.io/travis/danbovey/laravel-linkheader-paginator.svg)]()
-[![Packagist Downloads](https://img.shields.io/packagist/dt/danbovey/laravel-linkheader-paginator.svg)]()
-[![Version](https://img.shields.io/packagist/v/danbovey/laravel-linkheader-paginator.svg)]()
-[![License](https://img.shields.io/packagist/l/danbovey/laravel-linkheader-paginator.svg)]()
+[![Travis](https://img.shields.io/travis/danbovey/laravel-linkheader-paginator.svg)](https://travis-ci.org/danbovey/laravel-linkheader-paginator)
+[![Packagist Downloads](https://img.shields.io/packagist/dt/danbovey/laravel-linkheader-paginator.svg)](https://packagist.org/packages/danbovey/laravel-linkheader-paginator)
+[![Version](https://img.shields.io/packagist/v/danbovey/laravel-linkheader-paginator.svg)](https://packagist.org/packages/danbovey/laravel-linkheader-paginator)
+[![License](https://img.shields.io/packagist/l/danbovey/laravel-linkheader-paginator.svg)](https://raw.githubusercontent.com/danbovey/laravel-linkheader-paginator/master/LICENSE)
 
 A custom Laravel/Lumen Paginator that uses the [Link header (RFC 5988)](https://tools.ietf.org/html/rfc5988) to send pagination info in the response. Removes the envelope around `data`!
 
