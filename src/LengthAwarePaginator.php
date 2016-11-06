@@ -17,7 +17,9 @@ class LengthAwarePaginator extends BasePaginator {
 	 * @return array
 	 */
 	public function toArray() {
-		return $this->items->toArray();
+		// array_values makes sure we return an flat array
+		// [0 => first, 1 => second] instead of [5 => first, 6 => second]
+		return array_values($this->items->toArray());
 	}
 
 	/**
