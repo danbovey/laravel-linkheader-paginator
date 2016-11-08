@@ -40,6 +40,7 @@ class LengthAwarePaginator extends BasePaginator {
 
 		foreach($links as $rel => $url) {
 			if($url != null) {
+				$url = $this->joinPaths(BasePaginator::resolveCurrentPath(), $url);
 				$headers[] = (new Link($url, $rel))->toString();
 			}
 		}
@@ -63,6 +64,10 @@ class LengthAwarePaginator extends BasePaginator {
 		$response = new JsonResponse($this->toArray());
 
 		return $response->withHeaders($this->getHeaders());
+	}
+
+	private function joinPaths($a, $b) {
+		return rtrim($a, '/') .'/'. ltrim($b, '/');
 	}
 
 }

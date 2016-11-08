@@ -17,8 +17,8 @@ class SimplePaginatorTest extends TestCase {
 		$link = $paginator->getHeaders()['Link'];
 		$parsed = \phpish\link_header\parse($link);
 
-		$this->assertEquals($parsed['current'][0]['uri'], '/?page=' . $this->page);
-		$this->assertEquals($parsed['next'][0]['uri'], '/?page=' . ($this->page + 1));
+		$this->assertEquals('/?page=' . $this->page, $parsed['current'][0]['uri']);
+		$this->assertEquals('/?page=' . ($this->page + 1), $parsed['next'][0]['uri']);
 	}
 
 	public function testResponse() {
@@ -26,7 +26,7 @@ class SimplePaginatorTest extends TestCase {
 		$response = $paginator->toResponse();
 
 		$this->assertTrue($response->headers->has('Link'));
-		$this->assertEquals($response->content(), json_encode(array_slice($this->items, 0, $this->per_page)));
+		$this->assertEquals(json_encode(array_slice($this->items, 0, $this->per_page)), $response->content());
 	}
 
 }
